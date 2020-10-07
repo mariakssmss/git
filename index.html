@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="ts/script.js"></script>
     <script src="js/test.js"></script>
     <script src="node_modules/less/dist/less.min.js"></script>
     <!-- Поключаем иконочный шрифт FontAwesome -->
@@ -42,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav  mr-auto">
                     <li class="nav-item">
-                        <a class="btn-danger btn btn-primary btn-dark" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Главная</a>
+                        <a class="btn-danger btn btn-primary btn-dark" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn-danger btn btn-primary btn-dark" id="gallery-tab" data-toggle="tab" href="#gallery" role="tab" aria-controls="gallery" aria-selected="false">Галерея</a>
@@ -55,6 +56,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="btn-danger btn btn-primary btn-dark" id="less-tab" data-toggle="tab" href="#less" role="tab" aria-controls="less" aria-selected="false">LESS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn-danger btn btn-primary btn-dark" id="ts-tab" data-toggle="tab" href="#ts" role="tab" aria-controls="ts" aria-selected="true">TypeScript</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" id></a>
@@ -73,7 +77,7 @@
 
 <div class="container">
     <div class="tab-content">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -377,6 +381,7 @@
             </div>
         </div>
 
+
             <div class="tab-pane" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
                 <h2>Форма обратной связи.</h2>
                 <form name="MyForm" action="" method="post">
@@ -397,10 +402,6 @@
                     <b><input id="submit" value="Отправить" type="submit"></b>
                 </form>
             </div>
-
-
-
-
                 <div class="tab-pane" id="less" role="tabpanel" aria-labelledby="less-tab">
                     <div class="wrapper">
                         <nav class="mynav">
@@ -478,6 +479,29 @@
                         </section>
                     </div>
                 </div>
+        <div class="tab-pane active" id="ts" role="tabpanel" aria-labelledby="ts-tab">
+            <div class="container">
+                <div class="row py-2">
+                    <div class="col-md-4 col-lg-3 col-xl-2 border bg-light">
+                        <h4 class="p-1">Фильтры:</h4>
+                        <div id = "myTools">
+                        </div>
+                        <h4>Корзина:</h4>
+                        <p id="myBasket">В даннвй момент в корзина пустая</p>
+                    </div>
+                    <div class="col-md-8 col-lg-9 col-xl-10 border">
+                        <h4 class="text-center p-1">Каталог товаров:</h4>
+                        <div class="container">
+                            <div class="row" id = "rows">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
     </div>
 </div>
 
